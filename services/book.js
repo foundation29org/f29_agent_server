@@ -8,8 +8,8 @@ function callBook (req, res){
   console.log(jsonText)
   // const functionUrl = `http://localhost:7071/api/f29bot2?code=${config.functionKey}`;
   // const functionUrl = `http://localhost:7071/api/epar_agent?code=${config.functionKey}`;
-  const functionUrl = `http://127.0.0.1:7071/api/f29_agent?code=${config.functionKey}`;
-  // const functionUrl = `https://af29.azurewebsites.net/api/HttpTrigger2?code=${config.functionKey}`;
+  //const functionUrl = `http://127.0.0.1:7071/api/f29_agent?code=${config.functionKey}`;
+  const functionUrl = `https://f29f.azurewebsites.net/api/f29_agent?code=${config.functionKey}`;
   axios.post(functionUrl, jsonText)
   .then(async response => {
       try {
