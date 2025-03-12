@@ -5,7 +5,6 @@ const express = require('express')
 
 const langCtrl = require('../controllers/all/lang')
 
-const openAIserviceCtrl = require('../services/openai')
 const bookCtrl = require('../services/book')
 const cors = require('cors');
 
@@ -47,7 +46,6 @@ function corsWithOptions(req, res, next) {
 api.get('/langs/',  langCtrl.getLangs)
 
 //services OPENAI
-api.post('/callopenai', corsWithOptions, checkApiKey, openAIserviceCtrl.callOpenAi)
 api.post('/callbook', corsWithOptions, checkApiKey, bookCtrl.callBook)
 
 
